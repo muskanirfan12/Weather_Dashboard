@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Input and buttons -->
+    <div class="container">
+        <div class="current-weather">
+    <div class="search-area">
+        <input id="search" type="search" placeholder="Karachi, Lahore,etc.">
+        <button class="search-btn button">Search</button>
+        <div id="or-seprator"></div>
+        <button class="location-btn button">Use Current Location</button>
+    </div>
+
+    <!-- Current Weather insert by javascript -->
+    <div class="main-weather"></div>
+</div>
+
+    <div class="weather-forecast">
+        <!-- Integrate Google Maps -->
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d115845.66291928929!2d67.15146239999999!3d24.8578048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1716573697436!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h1>5 Days Forecast</h1>
+        <div class="weather-cards">
+            <!-- 5 days forecast cards -->
+            <div class="cards"></div>
+
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

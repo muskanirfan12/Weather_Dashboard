@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* main container */
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.current-weather {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+}
+
+.search-area {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-weather {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  background-color: #fff;
+}
+
+.search-area input {
+  margin: 20px 10px;
+  width: 350px;
+  height: 35px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: #efefef;
+}
+
+.search-area button {
+  width: 300px;
+  background-color: #748cf1;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  padding: 10px 0px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 50px;
+  border-style: none;
+  transition: box-shadow 0.5s ease;
+}
+
+.search-area button:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.search-area #or-seprator {
+  position: relative;
+  height: 1px;
+  width: 60%;
+  margin: 25px 0;
+  background: #bbbbbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#or-seprator::before {
+  content: "or";
+  color: #6c757d;
+  font-size: 1.18rem;
+  padding: 0 15px;
+  margin-top: -4px;
+  background: #fff;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.main-weather .image {
+  text-align: center;
+}
+
+.main-weather .image img {
+  width: 260px;
+  margin: -20px 0px;
+}
+
+.main-weather h1 {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 350;
+}
+
+.main-weather h3 {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+.seprator {
+  height: 1px;
+  width: 60%;
+  margin: 25px 0;
+  background: #bbbbbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-information {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.weather-information h4 {
+  font-family: "Ubuntu", sans-serif;
+  display: inline;
+  margin-top: 30px;
+  padding: 0px 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#wind {
+  position: relative;
+  top: 11%;
+}
+
+#wind::after {
+  content: "Wind";
+  display: block;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#humidity {
+  position: relative;
+}
+
+#humidity::after {
+  content: "Humidity";
+  display: block;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#feels-like {
+  position: relative;
+}
+
+#feels-like::after {
+  content: "Feels like";
+  display: block;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.main-weather h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.main-weather h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin-top: 30px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.weather-forecast {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #efefef;
+  align-items: center;
+}
+
+.weather-forecast iframe {
+  width: 900px;
+  height: 300px;
+}
+
+.weather-cards {
+  display: flex;
+  justify-content: center;
+  color: #efefef;
+  background-color: #efefef;
+}
+
+.cards {
+  border-radius: 10px;
+  width: 170px;
+  height: 210px;
+  background-color: #748cf1;
+  text-align: center;
+  padding: 20px 10px;
+  margin: 35px 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cards ul li {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 17px;
+  font-weight: 350;
+  line-height: 30px;
+}
+
+.cards ul li img {
+  width: 140px;
+  margin: -20px 0px;
+}
+
+.weather-forecast h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 1400px) {
+  .weather-cards {
+    flex-wrap: wrap;
+  }
+
+  .weather-forecast iframe {
+    width: 600px;
+    height: 200px;
+  }
+
+  .cards {
+    width: 150px;
+    height: 210px;
+    padding: 20px 10px;
+    margin: 20px 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .weather-forecast iframe {
+    width: 500px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .weather-forecast iframe {
+    width: 400px;
+    height: 200px;
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #wind {
+    top: 0%;
+  }
+
+  .main-weather h3 {
+    margin-bottom: 20px;
+  }
+
+  .main-weather h1 {
+    font-size: 3rem;
+  }
+
+  .weather-forecast h1 {
+    font-size: 2rem;
+  }
+
+  .main-weather input {
+    width: 300px;
+  }
+
+  .main-weather .button {
+    width: 250px;
+  }
+}
+
+@media (max-width: 560px) {
+  .weather-forecast iframe {
+    width: 300px;
+    height: 200px;
+  }
+
+  .weather-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
